@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shiva Marble | Premium Marble Collection</title>
+
+    <meta name="description"
+          content="Shiva Marble - Premium quality marble for homes, offices and commercial projects.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>SM</span>
+        <div>
+            <h2>Shiva Marble</h2>
+            <small>Premium Stone Collection</small>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Marbles</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+        🛒 Cart <span id="cartCount">0</span>
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="tagline">PREMIUM QUALITY • TRUSTED SERVICE</p>
+
+        <h1>
+            Beautiful Marble<br>
+            For <span>Beautiful Spaces</span>
+        </h1>
+
+        <p class="hero-text">
+            Discover premium marble collections for your home,
+            office, hotel and commercial projects.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#products" class="btn primary">
+                Explore Marbles
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Contact Us
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature">
+        <div class="feature-icon">💎</div>
+        <h3>Premium Quality</h3>
+        <p>High-quality marble selected for beautiful interiors.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">🚚</div>
+        <h3>Safe Delivery</h3>
+        <p>Careful handling and reliable delivery service.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">🤝</div>
+        <h3>Trusted Service</h3>
+        <p>Customer-focused service and genuine products.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Best Prices</h3>
+        <p>Competitive prices for quality marble products.</p>
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products" class="products-section">
+
+    <div class="section-heading">
+
+        <p>OUR COLLECTION</p>
+
+        <h2>Premium Marble Collection</h2>
+
+        <span>
+            Choose the perfect marble for your dream space.
+        </span>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search marble..."
+            onkeyup="searchProducts()"
+        >
+
+        <select id="categoryFilter" onchange="filterProducts()">
+
+            <option value="all">All Marbles</option>
+            <option value="white">White Marble</option>
+            <option value="black">Black Marble</option>
+            <option value="beige">Beige Marble</option>
+            <option value="green">Green Marble</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- PRODUCT GRID -->
+
+    <div id="productGrid" class="product-grid">
+
+        <!-- Product 1 -->
+
+        <div class="product-card" data-category="white">
+
+            <div class="product-image white-marble">
+                <span class="badge">POPULAR</span>
+            </div>
+
+            <div class="product-info">
+
+                <h3>Royal White Marble</h3>
+
+                <p>
+                    Elegant white marble with natural patterns.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹180 / sq.ft</strong>
+
+                    <button
+                        onclick="addToCart('Royal White Marble',180)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 2 -->
+
+        <div class="product-card" data-category="black">
+
+            <div class="product-image black-marble"></div>
+
+            <div class="product-info">
+
+                <h3>Black Galaxy Marble</h3>
+
+                <p>
+                    Premium dark marble for luxury interiors.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹220 / sq.ft</strong>
+
+                    <button
+                        onclick="addToCart('Black Galaxy Marble',220)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 3 -->
+
+        <div class="product-card" data-category="beige">
+
+            <div class="product-image beige-marble"></div>
+
+            <div class="product-info">
+
+                <h3>Classic Beige Marble</h3>
+
+                <p>
+                    Warm beige marble for elegant spaces.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹160 / sq.ft</strong>
+
+                    <button
+                        onclick="addToCart('Classic Beige Marble',160)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 4 -->
+
+        <div class="product-card" data-category="green">
+
+            <div class="product-image green-marble"></div>
+
+            <div class="product-info">
+
+                <h3>Forest Green Marble</h3>
+
+                <p>
+                    Natural green marble with unique patterns.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹250 / sq.ft</strong>
+
+                    <button
+                        onclick="addToCart('Forest Green Marble',250)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 5 -->
+
+        <div class="product-card" data-category="white">
+
+            <div class="product-image pearl-marble"></div>
+
+            <div class="product-info">
+
+                <h3>Pearl White Marble</h3>
+
+                <p>
+                    Clean and sophisticated marble finish.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹200 / sq.ft</strong>
+
+                    <button
+                        onclick="addToCart('Pearl White Marble',200)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 6 -->
+
+        <div class="product-card" data-category="black">
+
+            <div class="product-image premium-black"></div>
+
+            <div class="product-info">
+
+                <h3>Premium Black Stone</h3>
+
+                <p>
+                    Bold black stone for modern interiors.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹280 / sq.ft</strong>
+
+                    <button
+                        onclick="addToCart('Premium Black Stone',280)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about-section">
+
+    <div class="about-content">
+
+        <p class="section-label">ABOUT US</p>
+
+        <h2>Quality Marble.<br>Beautiful Spaces.</h2>
+
+        <p>
+            Welcome to Shiva Marble, owned by
+            <strong>Shiva Meghwall</strong>.
+        </p>
+
+        <p>
+            We provide premium marble and stone solutions
+            for homes, offices, hotels and commercial projects.
+            Our focus is quality, design and customer satisfaction.
+        </p>
+
+        <div class="about-stats">
+
+            <div>
+                <strong>100+</strong>
+                <span>Projects</span>
+            </div>
+
+            <div>
+                <strong>20+</strong>
+                <span>Marble Designs</span>
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                <span>Quality Focus</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="about-box">
+
+        <div class="marble-pattern"></div>
+
+        <h3>Shiva Marble</h3>
+
+        <p>
+            Premium Marble Collection
+        </p>
+
+        <strong>By Shiva Meghwall</strong>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="section-heading">
+
+        <p>GET IN TOUCH</p>
+
+        <h2>Let's Build Something Beautiful</h2>
+
+        <span>
+            Contact us for marble prices, availability and orders.
+        </span>
+
+    </div>
+
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <div class="contact-item">
+
+                <span>📞</span>
+
+                <div>
+                    <h3>Phone</h3>
+                    <p>+91 XXXXXXXXXX</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <span>💬</span>
+
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>Quick marble enquiry</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <span>📍</span>
+
+                <div>
+                    <h3>Location</h3>
+                    <p>Rajasthan, India</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <span>✉️</span>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>info@shivamarble.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <form class="contact-form" onsubmit="sendMessage(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+            >
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Tell us what marble you need..."
+                required
+            ></textarea>
+
+            <button type="submit" class="btn primary">
+                Send Enquiry
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h2>Shiva Marble</h2>
+
+            <p>
+                Premium Marble Collection
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                Owned by <strong>Shiva Meghwall</strong>
+            </p>
+
+            <p>
+                © 2026 Shiva Marble. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP BUTTON ================= -->
+
+<a
+    href="https://wa.me/91XXXXXXXXXX"
+    target="_blank"
+    class="whatsapp"
+    title="Chat on WhatsApp"
+>
+    💬
+</a>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div id="cartModal" class="cart-modal">
+
+    <div class="cart-box">
+
+        <button class="close-cart" onclick="closeCart()">
+            ×
+        </button>
+
+        <h2>Your Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <button
+            class="btn primary checkout"
+            onclick="checkout()"
+        >
+            Order on WhatsApp
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
